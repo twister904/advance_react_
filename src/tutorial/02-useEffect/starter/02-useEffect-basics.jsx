@@ -8,6 +8,7 @@ const UseEffectBasics = () => {
 
   sayHello();
   useEffect(() => {
+    
     console.log("Hello from useEffect"); // This will run for only first rener because of empty array
   }, []);
 
