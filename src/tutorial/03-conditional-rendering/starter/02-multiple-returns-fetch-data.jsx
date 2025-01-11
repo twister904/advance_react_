@@ -28,28 +28,41 @@ const MultipleReturnsFetchData = () => {
       }
     }, 3000);
   }, []);
+
   if (isLoading) {
     return <h2>Fetching Data....Please wait 👀👀👀 </h2>;
   } else if (error) {
     return <h2>Error...</h2>;
   } else {
+    const {
+      id,
+      avatar_url,
+      login,
+      url,
+      company,
+      location,
+      followers,
+      following,
+      bio,
+      blog,
+    } = users;
     return (
       <section>
-        <div key={users.id} className='user'>
-          <a href={users.url}>
+        <div key={id} className='user'>
+          <a href={url}>
             <img
-              src={users.avatar_url}
-              alt={users.login}
+              src={avatar_url}
+              alt={login}
               style={{ width: "150px", borderRadius: "25px" }}
             />
-            <h3>{users.login}</h3>
+            <h3>{login}</h3>
           </a>
-          <h5>{users.company}</h5>
-          <p>Location: {users.location}</p>
-          <p>Followers: {users.followers}</p>
-          <p>Following: {users.following}</p>
-          <p>Bio: {users.bio}</p>
-          <p>blog: {users.blog}</p>
+          <h5>{company}</h5>
+          <p>Location: {location}</p>
+          <p>Followers: {followers}</p>
+          <p>Following: {following}</p>
+          <p>Bio: {bio}</p>
+          <p>blog: {blog}</p>
         </div>
       </section>
     );
