@@ -1,10 +1,19 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 const UncontrolledInputs = () => {
   const [value, setValue] = useState(0);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    //const name = e.currentTarget.name;
+    const formData = new FormData(e.currentTarget); // to get the form data and currentTarget refers to the from element that is being submitted
+    // console.log(formData);
+    // const name = formData.get("name");
+    // console.log(name);
+    // console.log([...formData.entries()]);
+    const newUser = Object.fromEntries(formData); // to get the key value pairs from the form data
+    console.log(newUser);
+    e.currentTarget.reset(); //to clear the form fields
   };
   return (
     <div>
