@@ -1,4 +1,5 @@
-import Starter from "./tutorial/02-useEffect/starter/05-cleanup-function";
+import Starter from "./tutorial/06-forms/starter/04-other-inputs";
+
 function App() {
   return (
     <div className='container'>
