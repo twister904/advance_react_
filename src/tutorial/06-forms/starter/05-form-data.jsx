@@ -6,7 +6,7 @@ const UncontrolledInputs = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     //const name = e.currentTarget.name;
-    const formData = new FormData(e.currentTarget); // to get the form data and currentTarget refers to the from element that is being submitted
+    const formData = new FormData(e.currentTarget); // to get the form data and currentTarget refers to the form element that is being submitted
     // console.log(formData);
     // const name = formData.get("name");
     // console.log(name);
