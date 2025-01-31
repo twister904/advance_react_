@@ -11,7 +11,7 @@ const Navlinks = ({ user, logout, login }) => {
           <a href='#'>about</a>
         </li>
       </ul>
-      <UserContainer user={user} logout={logout} login={login} />
+      <UserContainer />
     </div>
   );
 };

@@ -1,6 +1,8 @@
-import React from "react";
 import { useState } from "react";
-const UserContainer = ({ user, logout, login }) => {
+import { useAppContext } from "./Navbar";
+
+const UserContainer = () => {
+  const { user, logout, login } = useAppContext();
   const [name, setName] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
